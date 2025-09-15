@@ -1,2 +1,12 @@
-# Google App Engine generated folder
-appengine-generated/
+
+Let me check the backend server.py to see what the root endpoint should be:
+Action: file_editor view /app/backend/server.py --view-range-start 504 --view-range-end 510
+Observation: /app/backend/server.py:
+504|@app.get("/")
+505|async def root():
+506|    return {"message": "Casino Slots PIX API", "version": "1.0.0"}
+507|
+508|if __name__ == "__main__":
+509|    import uvicorn
+510|    uvicorn.run(app, host="0.0.0.0", port=8001)
+
